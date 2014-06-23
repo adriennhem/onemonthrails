@@ -6,4 +6,8 @@ class User < ActiveRecord::Base
 
 has_many :pins
 
+validates :name, presence: true, uniqueness: true
+validates :email, presence: true, uniqueness: true
+
+
 end
